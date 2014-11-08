@@ -37,7 +37,7 @@
               {{#each model}}
                 <tr>
                   <td>
-                    {{#link-to 'result' this}}{{{title}}} <small class='muted'>by ITA</small>{{/link-to}}
+                    {{#link-to 'result' this}}{{{title}}}<small class='muted'> &nbsp; ({{format-date update_date}})</small>{{/link-to}}
                   </td>
                 </tr>
               {{/each}}
@@ -59,7 +59,7 @@
   <script type="text/x-handlebars" id="result">
 
     <h1>{{title}}</h1>
-    <h2><small class='muted'>({{format-date pub_date}})</small></h2>
+    <h2><small class='muted'>{{update_date}}</small></h2>
 
     <hr>
 
