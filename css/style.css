@@ -1,7 +1,7 @@
 /* Put your CSS here */
 
 body  {	
-    background-image: url("/images/eg2bkg.png");
+    background-image: url("../images/eg2bkg.png");
     background-position:center top;
     background-repeat:no-repeat;
     background-color: #cccccc;
