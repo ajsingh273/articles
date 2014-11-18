@@ -11,7 +11,7 @@ App.Router.map(function() {
 
 App.ResultsRoute = Ember.Route.extend({
   model: function() {
-    return $.getJSON('http://api.trade.gov/trade_articles/search?callback=?').then(function(data) {
+    return $.getJSON('http://api.govwizely.com/ita_articles/search?callback=?').then(function(data) {
       return data.results.map(function(result) {
         result.body = result.content;
         return result;
@@ -22,7 +22,7 @@ App.ResultsRoute = Ember.Route.extend({
 
 App.ResultRoute = Ember.Route.extend({
   model: function(params) {
-    return $.getJSON('http://api.trade.gov/trade_articles/search?id='+params.result_id+'&callback=?').then(function(data) {
+    return $.getJSON('http://api.govwizely.com/ita_articles/search?id='+params.result_id+'&callback=?').then(function(data) {
     		data.result.body = data.result.content;
     		return data.result;
     	});
